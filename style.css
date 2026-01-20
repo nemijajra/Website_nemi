@@ -164,6 +164,8 @@ nav ul li a:hover {
 /* ================= GALLERY ================= */
 /* ================= GALLERY ================= */
 
+/* ================= GALLERY ================= */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -188,19 +190,23 @@ nav ul li a:hover {
   object-fit: cover;
   border-radius: 8px;
   opacity: 0;
-  animation: fade 9s infinite;
+  animation: fade 21s infinite; /* 7 images × 3s */
   transition: transform 0.3s ease;
 }
 
-/* Hover zoom (kept from your CSS) */
+/* Hover zoom */
 .gallery-item:hover img {
   transform: scale(1.05);
 }
 
-/* Timing for 3 images */
+/* Animation delays (supports up to 7 images) */
 .gallery-item img:nth-child(1) { animation-delay: 0s; }
 .gallery-item img:nth-child(2) { animation-delay: 3s; }
 .gallery-item img:nth-child(3) { animation-delay: 6s; }
+.gallery-item img:nth-child(4) { animation-delay: 9s; }
+.gallery-item img:nth-child(5) { animation-delay: 12s; }
+.gallery-item img:nth-child(6) { animation-delay: 15s; }
+.gallery-item img:nth-child(7) { animation-delay: 18s; }
 
 /* Fade animation */
 @keyframes fade {
